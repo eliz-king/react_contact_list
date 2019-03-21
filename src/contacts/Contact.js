@@ -2,14 +2,14 @@ import React from 'react';
 import { Table, Label, Button } from 'semantic-ui-react';
 
 
-const Contact = ({ firstName, phone })  => (
+const Contact = ({ id, firstName, phone, remove })  => (
   <Table.Row>
             <Table.Cell>
               <Label>{firstName}</Label>
             </Table.Cell>
             <Table.Cell>{phone}</Table.Cell>
             <Table.Cell>
-                <Button color='blue'>
+                <Button color='blue' onClick={() => remove(id)}>
                   Delete
                 </Button>
             </Table.Cell>
